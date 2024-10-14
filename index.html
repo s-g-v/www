@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Hm... O_o? An error occured</title>
+</head>
+<body>
+    <script>
+        var errorFiles = [
+            "src/android_bl.html",
+            "src/lnx_panic.html",
+            "src/kp.html",
+            "src/ubuntu_err.html",
+            "src/win_blue.html",
+            "src/win_upd.html",
+            "src/404.html",
+            "src/503.html",
+        ];
+        var randomIndex = Math.floor(Math.random() * errorFiles.length);
+        var randomErrorFile = errorFiles[randomIndex];
+        fetch(randomErrorFile)
+            .then(response => response.text())
+            .then(content => {
+                var errorElement = document.createElement('div');
+                errorElement.innerHTML = content;
+                document.body.appendChild(errorElement);
+            })
+            .catch(error => {
+                console.error('Error loading error file:', error);
+            });
+    </script>
+</body>
+</html>

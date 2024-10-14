@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ubuntu Kernel Crash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #ff0000;
+        }
+        
+        p {
+            color: #333333;
+        }
+        
+        pre {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ubuntu Kernel Crash</h1>
+    <p>An error occurred in the Ubuntu kernel. Please see the crash traces below:</p>
+    
+    <pre>
+        [  123.456789] Oops: 0000 [#1] SMP
+        [  123.456790] CPU: 0 PID: 1 Comm: init Not tainted 4.15.0-72-generic #81-Ubuntu
+        [  123.456791] Hardware name: VirtualBox, BIOS VirtualBox 12/01/2006
+        [  123.456792] RIP: 0010:do_something+0x12/0x20
+        [  123.456793] RSP: 0018:ffff88003e203e68 EFLAGS: 00010246
+        [  123.456794] RAX: 0000000000000000 RBX: ffff88003e203e68 RCX: 0000000000000000
+        [  123.456795] RDX: 0000000000000000 RSI: ffffffff81c0e000 RDI: ffff88003e203e68
+        [  123.456796] RBP: ffff88003e203e68 R08: 0000000000000000 R09: 0000000000000000
+        [  123.456797] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+        [  123.456798] R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+        [  123.456799] FS:  00007f5b2d3d6740(0000) GS:ffff88003e200000(0000) knlGS:0000000000000000
+        [  123.456800] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+        [  123.456801] CR2: 00007f5b2d3d6740 CR3: 0000000001c0a000 CR4: 00000000000006e0
+        [  123.456802] Call Trace:
+        [  123.456803]  do_something_else+0x12/0x20
+        [  123.456804]  init+0x12/0x20
+        [  123.456805]  do_one_initcall+0x12/0x20
+        [  123.456806]  kernel_init_freeable+0x12/0x20
+        [  123.456807]  kernel_init+0x12/0x20
+        [  123.456808]  ret_from_fork+0x12/0x20
+    </pre>
+
+    <p>... or you could hire <a href="https://www.linkedin.com/in/gsikors/">an experienced QA engineer</a> to prevent such issues &#128522; </p>
+
+</body>
+</html>

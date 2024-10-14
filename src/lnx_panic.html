@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <title>Linux Kernel Panic</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+        h1 {
+            color: #f00;
+        }
+        a {
+            color: #d9e016; 
+        }
+        .trace {
+            margin-bottom: 40px;
+        }
+        .trace div {
+            margin-bottom: 10px;
+        }
+        .trace div span:first-child{
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Linux Kernel Panic</h1>
+    <div class="trace">
+        <div>
+            <span>[ 0.000000] </span>Kernel panic - not syncing: Fatal exception
+        </div>
+        <div>
+            <span>[ 0.000001] </span>PC is at example_function+0x12/0x20
+        </div>
+        <div>
+            <span>[ 0.000002] </span>LR is at another_function+0x34/0x50
+        </div>
+        <div>
+            <span>[ 0.000003] </span>pc : [<span style="color: #0f0;">0x12345678</span>]    lr : [<span style="color: #0f0;">0x87654321</span>]    psr: 60000013
+        </div>
+        <div>
+            <span>[ 0.000004] </span>sp : 0xdeadbeef  ip : 0xdeadbeef  fp : 0xdeadbeef
+        </div>
+        <div>
+            <span>[ 0.000005] </span>r10: 0xdeadbeef  r9 : 0xdeadbeef  r8 : 0xdeadbeef
+        </div>
+        <div>
+            <span>[ 0.000006] </span>r7 : 0xdeadbeef  r6 : 0xdeadbeef  r5 : 0xdeadbeef  r4 : 0xdeadbeef
+        </div>
+        <div>
+            <span>[ 0.000007] </span>r3 : 0xdeadbeef  r2 : 0xdeadbeef  r1 : 0xdeadbeef  r0 : 0xdeadbeef
+        </div>
+        <div>
+            <span>[ 0.000008] </span>Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment none
+        </div>
+        <div>
+            <span>[ 0.000009] </span>Control: 10c5387d  Table: 12345678  DAC: 00000051
+        </div>
+    </div>        
+    <p>Contact your system administrator for further assistance ...</p>
+    <p>... or you could hire <a href="https://www.linkedin.com/in/gsikors/">an experienced QA engineer</a> to prevent such issues &#128522; </p>
+</body>
+</html>

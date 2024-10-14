@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kernel Crash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #ff0000;
+        }
+        a {
+            color: #d9e016; 
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .trace {
+            font-family: monospace;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kernel Panic</h1>
+    <p>Oops! It looks like your macOS kernel encountered a fatal error and crashed.</p>
+    <p>Please find below the kernel crash traces:</p>
+    <div class="trace">
+        <p>panic(cpu 0 caller 0xffffff8000123456): "Kernel panic - not syncing: Fatal exception in module XYZ"</p>
+        <p>Backtrace:</p>
+        <p>0xffffff8000123456</p>
+        <p>0xffffff8000123457</p>
+        <p>0xffffff8000123458</p>
+        <p>...</p>
+    </div>
+    <p>Please contact support for further assistance.</p>
+    <p>... or you could hire <a href="https://www.linkedin.com/in/gsikors/">an experienced QA engineer</a> to prevent such issues &#128522; </p>
+</body>
+</html>
