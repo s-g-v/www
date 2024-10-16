@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="styles.css">
     <title>Hm... O_o? An error occured</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="
+        script-src  'nonce-01a22dfb1b1746147fa182erfc345' 'strict-dynamic' 'unsafe-inline';
+        object-src 'none';
+        base-uri 'none';
+        frame-src 'none';
+        child-src 'none';
+    ">
 </head>
 <body>
-    <script>
+    <script nonce="01a22dfb1b1746147fa182erfc345">
         var errorFiles = [
             "src/android_bl.html",
             "src/lnx_panic.html",
